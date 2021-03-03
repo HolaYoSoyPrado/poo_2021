@@ -60,10 +60,10 @@ public class AltaEmpleado extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jTextField15 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
@@ -305,15 +305,6 @@ public class AltaEmpleado extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Empresariales", jPanel2);
 
-        jButton3.setText("Cargar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Guardar");
-
         jButton1.setText("<<");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,6 +318,15 @@ public class AltaEmpleado extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+
+        jButton3.setText("Cargar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Guardar");
 
         jButton5.setText("Nuevo registro");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -411,17 +411,28 @@ public class AltaEmpleado extends javax.swing.JFrame {
 
     private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
         // TODO add your handling code here:
+        
         System.out.println("Nuevo empleado!!!");
         this.limpiarFormulario();
         
-        Empleado emp= new Empleado():
+        Empleado emp= new Empleado();
         emp.setNombre(this.jTextField1.getText());
         emp.setApPaterno(this.jTextField2.getText());
         emp.setApMaterno(jTextField3.getText());
         emp.setEdad(Integer.parseInt(jTextField4.getText()));//convertir a int
         emp.setCurp(jTextField5.get.text());
-        emp.getDomicilio().setCalle(this.jTextField6.getText()):
-        
+        emp.getDomicilio(new Direccion());
+        emp.getDomicilio().setCalle(this.jTextField6.getText());
+        emp.getDomicilio().setNumero(this.jTextField7.getText());
+        emp.getDomicilio().setColonia(this.jTextField8.getText());
+        emp.getDomicilio().setDelegacion(this.jTextField9.getText());
+        emp.getDomicilio().setEstado(this.jTextField10.getText());
+        emp.setNumeroEmpleado(Integer.parseInt(this.jTextField11.getText()));
+        emp.setDepartamento(this.jTextField12.getText());
+        emp.setSueldo(Float.parseFloat(this.jTextField13.getText()));
+        emp.setHorasExtra(Integer.parseInt(this.jtextField14.getText()));
+        int confirmar= JOptionPane.showConfirmDialog(This. "¿Deseas guardar estos datos?")
+         
     }//GEN-LAST:event_jButton5MouseClicked
     
     private void limpiarFormulario(){
